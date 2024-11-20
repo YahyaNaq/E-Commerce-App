@@ -9,6 +9,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarTrigger,
 } from "@/components/ui/sidebar"
 
 // Menu items.
@@ -42,10 +43,13 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar>
+    <Sidebar className="z-30">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel><Copyright/></SidebarGroupLabel>
+          <SidebarGroupLabel className="flex justify-between">
+            <Copyright/>
+            <SidebarTrigger variant="theme" />
+          </SidebarGroupLabel>
           <SidebarGroupContent className="mt-2">
             <SidebarMenu>
               {items.map((item) => (

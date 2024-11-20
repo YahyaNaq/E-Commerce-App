@@ -16,7 +16,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <Card className="max-w-xs rounded-lg border shadow-md hover:shadow-lg transition-shadow">
+    <Card className="max-w-xs rounded-lg border hover:shadow-md transition-shadow">
       <CardHeader className="p-4">
         <img
           src={product.image}
@@ -33,7 +33,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <Button className="w-full xs:text-xs text-sm py-3 px-6">
           <a
             href={product.link}
-            className="w-full text-xs md:text-sm py-2 px-4 text-center text-white hover:text-white"
+            className="w-full text-xs md:text-sm py-2 px-4 text-center"
           >
             View Product
           </a>

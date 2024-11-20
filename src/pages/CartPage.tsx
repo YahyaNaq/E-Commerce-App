@@ -60,7 +60,7 @@ const CartPage = () => {
         <div className="my-4">
           <Button variant="default">
             <SquareArrowOutUpRight/>
-            <a href="/checkout" className="text-white hover:text-white w-full">Checkout</a>
+            <a href="/checkout" className="w-full">Checkout</a>
           </Button>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

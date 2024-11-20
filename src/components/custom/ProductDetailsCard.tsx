@@ -18,14 +18,14 @@ interface ProductDetailsCardProps {
 
 const ProductDetailsCard: React.FC<ProductDetailsCardProps> = ({ product }) => {
   return (
-    <Card className="max-w-4xl mx-auto my-8 shadow-lg border">
+    <Card className="max-w-4xl mx-auto my-8 shadow-sm border">
       <CardHeader>
-        <div className="flex gap-6 py-4">
+        <div className="sm:flex gap-6 py-4">
           {/* Product Image */}
           <img
             src={product.image}
             alt={product.name}
-            className="w-1/3 object-cover rounded-lg"
+            className="sm:w-1/3 object-cover rounded-lg mb-2"
           />
           {/* Product Information */}
           <div className="flex-1">
@@ -54,7 +54,7 @@ const ProductDetailsCard: React.FC<ProductDetailsCardProps> = ({ product }) => {
         <Button className="w-full xs:text-xs text-sm py-3 px-6">
           <a
             href={product.link}
-            className="flex items-center justify-center w-full gap-x-2 text-center text-white hover:text-white"
+            className="flex items-center justify-center w-full gap-x-2 text-center"
           >
             <ShoppingCart className="h-5 w-5" />
             Add to Cart

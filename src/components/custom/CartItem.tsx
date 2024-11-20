@@ -24,7 +24,7 @@ const CartItem: React.FC<CartItemProps> = ({ product, removeProductFromCart }) =
   const [quantity, setQuantity] = useState(product.quantity);
 
   return (
-    <Card className="max-w-xs rounded-lg border shadow-md hover:shadow-lg transition-shadow">
+    <Card className="max-w-xs rounded-lg border hover:shadow-md transition-shadow">
       <CardHeader className="p-4">
         <div className="flex items-center relative">
           <img
