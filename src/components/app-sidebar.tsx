@@ -43,12 +43,12 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar className="z-30">
+    <Sidebar className="z-30" side="right">
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel className="flex justify-between">
+            <SidebarTrigger variant="theme" className="h-7 w-7"/>
             <Copyright/>
-            <SidebarTrigger variant="theme" />
           </SidebarGroupLabel>
           <SidebarGroupContent className="mt-2">
             <SidebarMenu>
