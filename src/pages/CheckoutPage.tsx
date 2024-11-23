@@ -209,9 +209,6 @@ const CheckoutPage = () => {
             </Button>
           </div>
         </div>
-        <div className="my-80">
-
-        </div>
       </div>
     </PageLayout>
   );
