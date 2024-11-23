@@ -1,4 +1,4 @@
-import { Calendar, ShoppingCart, Copyright, Home, Search, Settings } from "lucide-react"
+import { Calendar, ShoppingCart, Copyright, Home, Search, Settings, X } from "lucide-react"
 
 import {
   Sidebar,
@@ -47,7 +47,7 @@ export function AppSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel className="flex justify-between">
-            <SidebarTrigger variant="theme" className="h-7 w-7"/>
+            <SidebarTrigger variant="default" className="h-7 w-7 font-bold shadow-none" icon={<X strokeWidth={2.5} />} />
             <Copyright/>
           </SidebarGroupLabel>
           <SidebarGroupContent className="mt-2">

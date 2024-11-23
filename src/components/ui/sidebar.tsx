@@ -19,8 +19,8 @@ import {
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
-const SIDEBAR_WIDTH = "16rem"
-const SIDEBAR_WIDTH_MD = "14rem"
+const SIDEBAR_WIDTH = "18rem"
+const SIDEBAR_WIDTH_MD = "18rem"
 const SIDEBAR_WIDTH_SM = "12rem"
 const SIDEBAR_WIDTH_MOBILE = "18rem"
 const SIDEBAR_WIDTH_ICON = "3rem"
@@ -168,7 +168,7 @@ const Sidebar = React.forwardRef<
 >(
   (
     {
-      side = "right",
+      side = "left",
       variant = "sidebar",
       collapsible = "offcanvas",
       overlay = true,
@@ -198,7 +198,7 @@ const Sidebar = React.forwardRef<
     if (isMobile) {
       return (
         <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
-          <SheetTitle />
+          <SheetTitle>Products</SheetTitle>
           <SheetContent
             data-sidebar="sidebar"
             data-mobile="true"
@@ -219,13 +219,9 @@ const Sidebar = React.forwardRef<
     if (overlay) {
       return (
         <Sheet open={open} onOpenChange={setOpen} {...props}>
-          <SheetTitle />
+          <SheetTitle>Products</SheetTitle>
           <SheetContent
-            ref={ref}
             className="md:w-[--sidebar-width-md] w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
-            data-state={state}
-            data-collapsible={state === "collapsed" ? collapsible : ""}
-            data-variant={variant}
             data-side={side}
             data-sidebar="sidebar"
             style={
@@ -341,7 +337,7 @@ const SidebarTrigger = React.forwardRef<
     >
       {icon}
       {props.title && 
-        <span className="">{ props.title }</span>
+        <span className="hidden md:block">{ props.title }</span>
       }
     </Button>
   )

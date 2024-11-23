@@ -13,14 +13,13 @@ const Header: React.FC<{sidebarTrigger?: React.ReactNode}> = ({sidebarTrigger}) 
           <Button variant="outline" className="p-2 lg:hidden">
             <Menu className="h-5 w-5" />
           </Button>
-          <h1 className="text-xl font-bold text-white">BrandName</h1>
+          <a href="/">
+            <h1 className="text-xl font-bold text-white">BrandName</h1>
+          </a>
         </div>
 
         {/* Navigation */}
         <nav className="hidden lg:flex space-x-8">
-          <a href="/" className="hover:scale-105 p-1">
-            Home
-          </a>
           <a href="/about" className="hover:scale-105 p-1">
             About
           </a>
