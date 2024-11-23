@@ -1,5 +1,5 @@
 import CartItem from "@/components/custom/CartItem";
-import SearchBar from "@/components/custom/SearchBar";
+import SearchBarLive from "@/components/custom/SearchBarLive";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, SquareArrowOutUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -57,7 +57,7 @@ const CartSheet = () => {
                     <SheetDescription>
                         <div>
                             <div className="w-full my-3 md:my-5">
-                                <SearchBar onChange={(e) => handleSearch(e.target.value)} placeholder="Search products in the cart" />
+                                <SearchBarLive onChange={(e) => handleSearch(e.target.value)} placeholder="Search products in the cart" />
                             </div>
                             <div className="my-4">
                                 <Button variant="default">

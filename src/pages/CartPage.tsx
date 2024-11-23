@@ -1,5 +1,5 @@
 import CartItem from "@/components/custom/CartItem";
-import SearchBar from "@/components/custom/SearchBar";
+import SearchBarLive from "@/components/custom/SearchBarLive";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/layouts/PageLayout";
 import { SquareArrowOutUpRight } from "lucide-react";
@@ -55,7 +55,7 @@ const CartPage = () => {
     <PageLayout title="Cart" breadcrumbs={breadcrumbs} useParentCard={false}>
       <div>
         <div className="w-full sm:w-7/12 lg:w-4/12 my-3 md:my-5">
-          <SearchBar onChange={(e) => handleSearch(e.target.value)} placeholder="Search products in the cart" />
+          <SearchBarLive onChange={(e) => handleSearch(e.target.value)} placeholder="Search products in the cart" />
         </div>
         <div className="my-4">
           <Button variant="default">

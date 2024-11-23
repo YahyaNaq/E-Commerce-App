@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils";
 import { Search } from "lucide-react";
+import { Button } from "../ui/button";
 
 type SearchBarProps = {
 	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -10,17 +11,17 @@ type SearchBarProps = {
 
 const SearchBar: React.FC<SearchBarProps> = ({ onChange, placeholder="Search", inputClassname }) => {
     return (
-		<div className="flex items-center relative">
+		<div className="flex items-center relative md:w-80">
 			{/* Icon */}
-			<span className="absolute inset-y-0 left-3 flex items-center text-gray-500">
-			<Search className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
-			</span>
 			<Input
 				type="search"
 				placeholder={placeholder}
-				className={cn("text-xs md:text-sm pl-8 lg:pl-10", inputClassname)}
+				className={cn("text-xs md:text-sm", inputClassname)}
 				onChange={onChange}
 			/>
+			<Button variant="default" className="absolute inset-y-0 right-0 flex items-center rounded-none rounded-e-md">
+				<Search className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
+			</Button>
 		</div>
     );
 }

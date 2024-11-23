@@ -16,7 +16,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <Card className="max-w-xs rounded-lg border hover:shadow-md transition-shadow">
+    <Card className="w-full max-w-xs rounded-lg border hover:shadow-md transition-shadow">
       <CardHeader className="p-4">
         <img
           src={product.image}

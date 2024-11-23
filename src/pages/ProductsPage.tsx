@@ -1,5 +1,5 @@
 import ProductCard from "@/components/custom/ProductCard";
-import SearchBar from "@/components/custom/SearchBar";
+import SearchBarLive from "@/components/custom/SearchBarLive";
 import PageLayout from "@/layouts/PageLayout";
 import { useState } from "react";
 
@@ -88,7 +88,7 @@ const ProductsPage = () => {
     <PageLayout title="Products" breadcrumbs={breadcrumbs} useParentCard={false}>
       <div>
         <div className="w-full sm:w-7/12 lg:w-4/12 my-3 md:my-5">
-          <SearchBar onChange={(e) => handleSearch(e.target.value)} placeholder="Search products by name" />
+          <SearchBarLive onChange={(e) => handleSearch(e.target.value)} placeholder="Search products by name" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProducts.map((product, index) => (
