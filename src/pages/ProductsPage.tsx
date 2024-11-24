@@ -87,7 +87,7 @@ const ProductsPage = () => {
   return (
     <PageLayout title="Products" breadcrumbs={breadcrumbs} useParentCard={false}>
       <div>
-        <div className="w-full sm:w-7/12 lg:w-4/12 my-3 md:my-5">
+        <div className="w-full xs:8/12 sm:w-7/12 lg:w-4/12 my-3 md:my-5">
           <SearchBarLive onChange={(e) => handleSearch(e.target.value)} placeholder="Search products by name" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

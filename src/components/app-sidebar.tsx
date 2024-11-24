@@ -43,7 +43,7 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar className="z-30" side="right">
+    <Sidebar className="z-" side="right">
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel className="flex justify-between">

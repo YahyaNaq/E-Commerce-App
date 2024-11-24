@@ -19,7 +19,7 @@ interface PageLayoutProps {
 
 const PageLayout: React.FC<PageLayoutProps> = ({ title, breadcrumbs, children, useParentCard }) => {
   return (
-    <div className="mt-4 space-y-3">
+    <div className="container mx-auto mt-4 px-3 space-y-3">
       {breadcrumbs && (
         <BreadCrumb breadcrumbs={breadcrumbs} />
       )}

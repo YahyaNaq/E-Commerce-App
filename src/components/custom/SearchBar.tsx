@@ -11,7 +11,7 @@ type SearchBarProps = {
 
 const SearchBar: React.FC<SearchBarProps> = ({ onChange, placeholder="Search", inputClassname }) => {
     return (
-		<div className="flex items-center relative md:w-80">
+		<div className="flex items-center relative">
 			{/* Icon */}
 			<Input
 				type="search"

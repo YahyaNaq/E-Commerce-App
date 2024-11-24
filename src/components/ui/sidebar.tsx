@@ -198,7 +198,7 @@ const Sidebar = React.forwardRef<
     if (isMobile) {
       return (
         <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
-          <SheetTitle>Products</SheetTitle>
+          <SheetTitle className="p-0 m-0" visuallyHidden={true}>Products</SheetTitle>
           <SheetContent
             data-sidebar="sidebar"
             data-mobile="true"
@@ -219,7 +219,7 @@ const Sidebar = React.forwardRef<
     if (overlay) {
       return (
         <Sheet open={open} onOpenChange={setOpen} {...props}>
-          <SheetTitle>Products</SheetTitle>
+          <SheetTitle className="p-0 m-0" visuallyHidden={true}>Products</SheetTitle>
           <SheetContent
             className="md:w-[--sidebar-width-md] w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
             data-side={side}
@@ -318,8 +318,8 @@ Sidebar.displayName = "Sidebar"
 
 const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>,
-  React.ComponentProps<typeof Button> & { icon?: React.ReactNode }
->(({ className, onClick, icon = <Menu/>, ...props }, ref) => {
+  React.ComponentProps<typeof Button> & { icon?: React.ReactNode, side?: string }
+>(({ className, onClick, icon = <Menu/>, side = "left", ...props }, ref) => {
   const { toggleSidebar } = useSidebar()
 
   return (
@@ -328,7 +328,7 @@ const SidebarTrigger = React.forwardRef<
       data-sidebar="trigger"
       variant={props.variant ?? 'outline'}
       size={props.size ?? "icon"}
-      className={cn("", className)}
+      className={cn(side == "right" ? "flex flex-row-reverse" : '', className)}
       onClick={(event) => {
         onClick?.(event)
         toggleSidebar()
